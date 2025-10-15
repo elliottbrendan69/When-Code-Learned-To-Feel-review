@@ -42,22 +42,20 @@
     /* Hero image section */
     .hero {
       margin: 18px 0;
-      border-radius: 10px;
-      overflow: hidden;
       text-align: center;
     }
     .hero img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-  object-fit: contain;
-}
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
       border-radius: 10px;
+      object-fit: contain;
       box-shadow: 0 8px 22px rgba(0,0,0,0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
     }
     .hero img:hover {
       transform: scale(1.015);
@@ -69,6 +67,11 @@
       margin-top: 6px;
       text-align: center;
       font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
     .content {line-height:1.6;color:#e8eef3;font-size:16px;margin-top:12px;}
@@ -108,43 +111,41 @@
     </figure>
 
     <article class="content">
-      <p>I’ll be honest — I’m not the kind of person who sits around wondering how songs get made. Same way I don’t ask my favorite diner in Wisconsin what’s in their chili cheese fries. Some mysteries taste better unsolved.</p>
+      <p>I’ll be honest — I’m not the kind of person who sits around wondering how songs get made. Same way I don’t ask my favorite diner in Wisconsin what’s in their cheesecake that tastes like heartbreak and vanilla extract. Some mysteries are better left unsolved.</p>
 
-      <p>But when a pre-release of <em>When Code Learned to Feel</em> showed up in my inbox, I couldn’t let it go. The thing sounded too sharp, too alive — like it shouldn’t exist. So I did the journalist thing: I opened too many tabs and tried to figure out how something this weirdly human came out of a machine.</p>
+      <p>But when a pre-release of <em>When Code Learned to Feel</em> landed in my inbox, I couldn’t let it go. The thing sounded too sharp, too alive — like it shouldn’t exist. So I did the journalist thing: opened too many tabs and tried to figure out how something this weirdly human came out of a machine.</p>
 
-      <p>Turns out BAYSGATE — whoever they are — had everything written: lyrics, melodies, production, the bones and the blood. But no voice. So they did what any 2025 romantic would do: opened a laptop and invited AI vocalists to take a seat at the mic.</p>
+      <p>Turns out BAYSGATE had everything written: lyrics, melodies, production, the bones and the blood. But no voice. So they did what any 2025 romantic would do — opened a laptop and invited AI vocalists to take a seat at the mic.</p>
 
       <p>Yeah. All of them were artificial. And somehow, the result still feels heartbreakingly real.</p>
 
-      <p>The music industry loves to say AI will kill creativity. Maybe that day’s coming, but BAYSGATE clearly didn’t get the memo. The writing happened the old way: pen, paper, insomnia. What the machines added wasn’t inspiration — it was interpretation. And the result doesn’t sound robotic; it sounds <em>intentional</em>.</p>
+      <p>The music industry loves to say AI will kill creativity. Maybe that day’s coming, but BAYSGATE clearly didn’t get the memo. What the machines added wasn’t inspiration — it was <strong>interpretation</strong>. And the result doesn’t sound robotic; it sounds intentional.</p>
 
-      <p>The vocals are <strong>amazing</strong> — not because they’re flawless, but because they understand drama. Every hook lands like someone confessing something they didn’t mean to say. The words do the rest. BAYSGATE have this unnerving habit of turning emotion into math and somehow making it rhyme. Twice I laughed out loud. Twice I felt personally attacked. And somewhere in there, I started saving genres I normally skip.</p>
+      <p>The vocals are <em>amazing</em> — not because they’re flawless, but because they understand drama. Every hook lands like someone confessing something they didn’t mean to say, and you can almost hear the digital equivalent of a smile behind every performance. The words do the rest. BAYSGATE have this unnerving habit of turning emotion into math and somehow making it rhyme. Twice I laughed out loud. Twice I felt personally attacked. And somewhere in there, I started saving genres I normally skip.</p>
 
       <p>That’s the real trick of <em>When Code Learned to Feel</em>: it’s not trying to impress you — it’s trying to understand you.</p>
 
-      <p>The record kicks off with <em>Shoes</em>, a 90s-alt sugar hit that could’ve been written by American Hi-Fi’s cooler cousin if they’d grown up on Spotify. <em>Bad Girls Never Sleep</em> drifts through a neon haze like a Miley Cyrus video that got arrested for public indecency. <em>Running When Parked</em> bites with late-’80s edge; <em>Glitch</em> just sits in your Wi-Fi like a ghost humming to itself.</p>
+      <p>The record kicks off with <em>Shoes</em>, a 90s-alt pop hit that could’ve been written by American Hi-Fi’s cooler cousin if they’d grown up on Spotify. <em>Bad Girls Never Sleep</em> drifts through a neon bassline like a Miley Cyrus video that got arrested for public indecency. <em>Running When Parked</em> bites with late-’80s edge; <em>Glitch</em> just sits in your Wi-Fi like a ghost humming to itself.</p>
 
       <p>Then BAYSGATE lean soft. <em>The Backup Princess</em> is Disney heartbreak with union dues — a stand-in singer stealing the spotlight and somehow making it hers. <em>Lollipop</em> turns early-’60s bubblegum into an existential sugar rush, the kind of song that sticks to your brain like a bad crush. <em>Text STOP STACY</em> nails modern romance with the precision of a passive-aggressive screenshot. <em>Aurora Gory Alice</em> builds a doomed space opera out of prog-rock fragments, and <em>404: I Don’t Update Anymore</em> leaves a dumped AI stranded in digital purgatory.</p>
 
-      <p>Elsewhere, <em>Good Luck With That</em> detonates into a funk breakdown that sounds like Bruno Mars crashed a Stevie Wonder session, and <em>All About Her</em> brings genuine K-pop shimmer — partly in Japanese — before sliding into the hushed confessions of <em>Two Voices in the Kitchen</em> and the cinematic ache of <em>Spillways</em> and <em>You Would Have Liked Her</em>.</p>
+      <p>Elsewhere, <em>Good Luck With That</em> detonates into a funk breakdown that sounds like Bruno Mars crashed a Stevie Wonder session, while <em>All About Her</em> brings genuine K-pop shimmer — partly in Japanese — before gliding into the hushed confessions of <em>Two Voices in the Kitchen</em> and the cinematic ache of <em>Spillways</em> and <em>You Would Have Liked Her</em>.</p>
 
       <p>Every pivot feels deliberate, like someone mapping emotion rather than chasing playlists.</p>
 
-      <p>Then <em>Dying for Twenty</em> closes it all — quiet, merciless, and as haunting as Lisa Germano’s <em>A Psychopath</em>.</p>
+      <p>Then <em>Dying for Twenty</em> closes it all — quiet, merciless, and as haunting as anything you’ll ever hear.</p>
 
       <p><em>When Code Learned to Feel</em> doesn’t flex. It doesn’t apologize. It just listens — and that’s somehow the most human thing of all. In an era where algorithms reward sameness, BAYSGATE built something messy and alive: a cathedral of contradictions.</p>
 
       <p><strong>Twenty-nine tracks is a lot.</strong><br>Then again, so are emotions.<br>And BAYSGATE make every one count.</p>
 
-      <p><strong>Streaming everywhere November 11</strong></p>
+      <p><strong>Streaming everywhere November 11.</strong></p>
     </article>
 
     <footer>
       <h3>About the Writer</h3>
-      <p><strong>Skye Hartley</strong> didn’t mean to become a music journalist — she just kept writing about songs until people started sending her promo links. She files for <em>Static &amp; Signal</em>, lives off caffeine and curiosity, and maintains a complicated relationship with the replay button.</p>
+      <p><strong>Skye Hartley</strong> didn’t mean to become a music journalist — she just kept writing about songs until people started sending her promo links. She files for <em>Static &amp; Signal</em>, runs on caffeine and contrarian takes, and maintains a complicated relationship with the replay button.</p>
     </footer>
   </main>
 </body>
 </html>
-
-
