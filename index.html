@@ -13,87 +13,50 @@
   <meta property="og:image" content="og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Style -->
+  <!-- Styles -->
   <style>
     :root {
-      --bg:#0f1113; --card:#0f1215; --muted:#a9b0b6; --accent:#f0c7c7; --white:#fff;
+      --bg:#0f1113; --muted:#a9b0b6; --accent:#f0c7c7; --white:#fff;
       --maxw:880px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
     html,body {
-      height:100%;
-      margin:0;
+      height:100%; margin:0;
       background:linear-gradient(180deg,#08101a 0%, #0f1215 100%);
       color:var(--white);
     }
     .wrap {
       max-width:var(--maxw);
-      margin:36px auto;
-      padding:28px;
+      margin:36px auto; padding:28px;
       background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:12px;
       box-shadow:0 10px 30px rgba(2,6,23,0.6);
     }
-    header {text-align:center;margin-bottom:24px;}
-    h1 {font-size:28px;margin:10px 0 6px;letter-spacing:-0.02em;}
-    h2 {font-size:13px;margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;}
-    .byline {color:var(--muted);margin-top:8px;font-size:13px;}
+    header{text-align:center;margin-bottom:24px;}
+    h1{font-size:28px;margin:10px 0 6px;letter-spacing:-0.02em;}
+    h2{font-size:13px;margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;}
+    .subtag{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;}
+    .byline{color:var(--muted);margin-top:8px;font-size:13px;}
 
-    /* Hero image section */
-    .hero {
-      margin: 18px 0;
-      text-align: center;
+    .hero{text-align:center;margin:22px 0;}
+    .hero img{
+      width:100%;max-width:700px;height:auto;
+      border-radius:10px;object-fit:contain;
+      box-shadow:0 8px 22px rgba(0,0,0,0.4);
+      opacity:0;animation:fadeIn 1.2s ease forwards;
+      transition:transform .3s ease, box-shadow .3s ease;
     }
-    .hero img {
-      width: 100%;
-      max-width: 700px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 10px;
-      object-fit: contain;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
-    }
-    .hero img:hover {
-      transform: scale(1.015);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.5);
-    }
-    .hero figcaption {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 6px;
-      text-align: center;
-      font-style: italic;
-    }
+    .hero img:hover{transform:scale(1.015);box-shadow:0 10px 28px rgba(0,0,0,0.5);}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+    .content{line-height:1.6;color:#e8eef3;font-size:16px;margin-top:12px;}
+    .content p{margin:14px 0;}
 
-    .content {line-height:1.6;color:#e8eef3;font-size:16px;margin-top:12px;}
-    .content p {margin:14px 0;}
-
-    footer {
-      margin-top: 36px;
-      background: rgba(255,255,255,0.03);
-      padding: 16px 22px;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    }
-    footer h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-      color: var(--accent);
-    }
-
-    @media (max-width:600px){
-      h1{font-size:22px}
-      .wrap{margin:18px;padding:18px}
-    }
+    footer{margin-top:36px;background:rgba(255,255,255,0.03);
+      padding:16px 22px;border-radius:10px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.3);}
+    footer h3{font-size:16px;margin-bottom:8px;color:var(--accent);}
+    @media (max-width:600px){h1{font-size:22px}.wrap{margin:18px;padding:18px}}
   </style>
 </head>
 
@@ -101,31 +64,31 @@
   <main class="wrap">
     <header>
       <h2>Static &amp; Signal</h2>
+      <div class="subtag">Opinion · Culture · The Future of Pop</div>
       <h1>BAYSGATE reverse-engineer heartbreak — and somehow make pop feel dangerous again</h1>
       <div class="byline">By Skye Hartley</div>
     </header>
 
-    <figure class="hero">
-      <img src="album-cover.jpg" alt="When Code Learned to Feel — BAYSGATE Album Cover">
-      <figcaption>Album cover: <em>When Code Learned to Feel</em> by BAYSGATE</figcaption>
-    </figure>
+    <div class="hero">
+      <img src="album-cover.jpg" alt="When Code Learned to Feel — BAYSGATE Album Cover" />
+    </div>
 
     <article class="content">
       <p>I’ll be honest — I’m not the kind of person who sits around wondering how songs get made. Same way I don’t ask my favorite diner in Wisconsin what’s in their cheesecake that tastes like heartbreak and vanilla extract. Some mysteries are better left unsolved.</p>
 
-      <p>But when a pre-release of <em>When Code Learned to Feel</em> landed in my inbox, I couldn’t let it go. The thing sounded too sharp, too alive — like it shouldn’t exist. So I did the journalist thing: opened too many tabs and tried to figure out how something this weirdly human came out of a machine.</p>
+      <p>But when a pre-release of <em>When Code Learned to Feel</em> landed in my inbox, I couldn’t let it go. The thing sounded too sharp, too alive — like it shouldn’t exist. Unless you’ve been living in a bubble, you know the music industry’s been busy warning that AI will kill creativity. Maybe that day’s coming. But BAYSGATE clearly didn’t get the memo.</p>
 
-      <p>Turns out BAYSGATE had everything written: lyrics, melodies, production, the bones and the blood. But no voice. So they did what any 2025 romantic would do — opened a laptop and invited AI vocalists to take a seat at the mic.</p>
+      <p>Turns out BAYSGATE had everything written — lyrics, melodies, production, the bones and the blood — but no voice. So they did what any 2025 romantic would do: opened a laptop and invited AI vocalists to take a seat at the mic.</p>
 
       <p>Yeah. All of them were artificial. And somehow, the result still feels heartbreakingly real.</p>
 
-      <p>The music industry loves to say AI will kill creativity. Maybe that day’s coming, but BAYSGATE clearly didn’t get the memo. What the machines added wasn’t inspiration — it was <strong>interpretation</strong>. And the result doesn’t sound robotic; it sounds intentional.</p>
+      <p>What the machines added wasn’t inspiration — it was <strong>interpretation</strong>. And what came back didn’t sound robotic; it sounded unnervingly intentional.</p>
 
-      <p>The vocals are <em>amazing</em> — not because they’re flawless, but because they understand drama. Every hook lands like someone confessing something they didn’t mean to say, and you can almost hear the digital equivalent of a smile behind every performance. The words do the rest. BAYSGATE have this unnerving habit of turning emotion into math and somehow making it rhyme. Twice I laughed out loud. Twice I felt personally attacked. And somewhere in there, I started saving genres I normally skip.</p>
+      <p>The vocals are <em>amazing</em> — not because they’re perfect, but because they sound like they’re in on the secret. Every hook lands like someone confessing something they didn’t mean to say, and you can almost hear the digital equivalent of a smirk between lines. The words do the rest. BAYSGATE have this quiet talent for turning emotion into math and somehow making it rhyme. Twice I laughed out loud. Twice I felt personally attacked. And somewhere in there, I started saving genres I normally skip.</p>
 
-      <p>That’s the real trick of <em>When Code Learned to Feel</em>: it’s not trying to impress you — it’s trying to understand you.</p>
+      <p>That’s the trick of <em>When Code Learned to Feel</em>: it’s not trying to prove AI can make art. It’s trying to prove we’ll feel it anyway.</p>
 
-      <p>The record kicks off with <em>Shoes</em>, a 90s-alt pop hit that could’ve been written by American Hi-Fi’s cooler cousin if they’d grown up on Spotify. <em>Bad Girls Never Sleep</em> drifts through a neon bassline like a Miley Cyrus video that got arrested for public indecency. <em>Running When Parked</em> bites with late-’80s edge; <em>Glitch</em> just sits in your Wi-Fi like a ghost humming to itself.</p>
+      <p>The record kicks off with <em>Shoes</em>, a ’90s-alt pop hit that could’ve been written by American Hi-Fi’s cooler cousin if they’d grown up on Spotify. <em>Bad Girls Never Sleep</em> drifts through a neon bassline like a Miley Cyrus video that got arrested for public indecency. <em>Running When Parked</em> bites with late-’80s edge; <em>Glitch</em> just sits in your Wi-Fi like a ghost humming to itself.</p>
 
       <p>Then BAYSGATE lean soft. <em>The Backup Princess</em> is Disney heartbreak with union dues — a stand-in singer stealing the spotlight and somehow making it hers. <em>Lollipop</em> turns early-’60s bubblegum into an existential sugar rush, the kind of song that sticks to your brain like a bad crush. <em>Text STOP STACY</em> nails modern romance with the precision of a passive-aggressive screenshot. <em>Aurora Gory Alice</em> builds a doomed space opera out of prog-rock fragments, and <em>404: I Don’t Update Anymore</em> leaves a dumped AI stranded in digital purgatory.</p>
 
@@ -135,7 +98,7 @@
 
       <p>Then <em>Dying for Twenty</em> closes it all — quiet, merciless, and as haunting as anything you’ll ever hear.</p>
 
-      <p><em>When Code Learned to Feel</em> doesn’t flex. It doesn’t apologize. It just listens — and that’s somehow the most human thing of all. In an era where algorithms reward sameness, BAYSGATE built something messy and alive: a cathedral of contradictions.</p>
+      <p><em>When Code Learned to Feel</em> doesn’t flex. It doesn’t posture. It just listens — and that’s somehow the most human thing of all. In an era where algorithms reward sameness, BAYSGATE built something messy and alive: a cathedral of contradictions.</p>
 
       <p><strong>Twenty-nine tracks is a lot.</strong><br>Then again, so are emotions.<br>And BAYSGATE make every one count.</p>
 
@@ -144,7 +107,7 @@
 
     <footer>
       <h3>About the Writer</h3>
-      <p><strong>Skye Hartley</strong> didn’t mean to become a music journalist — she just kept writing about songs until people started sending her promo links. She files for <em>Static &amp; Signal</em>, runs on caffeine and contrarian takes, and maintains a complicated relationship with the replay button.</p>
+      <p><strong>Skye Hartley</strong> is a Milwaukee-based music journalist who didn’t mean to end up in this line of work — she just kept writing about songs until people started sending her promo links. She files for <em>Static &amp; Signal</em>, runs on caffeine and quiet awe, and maintains a complicated relationship with the replay button.</p>
     </footer>
   </main>
 </body>
