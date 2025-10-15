@@ -2,79 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>When Code Learned to Feel — Review | Skye Hartley, Static & Signal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Code Learned to Feel — Review by Skye Hartley · Static & Signal</title>
 
-  <!-- SEO / Social -->
-  <meta name="description" content="Reverse-engineered heartbreak that somehow makes pop feel dangerous again. Review by Skye Hartley for Static & Signal." />
-  <meta property="og:title" content="When Code Learned to Feel — Review | Static & Signal" />
-  <meta property="og:description" content="Reverse-engineered heartbreak that somehow makes pop feel dangerous again. Review by Skye Hartley." />
+  <!-- Social share / Open Graph -->
+  <meta property="og:title" content="When Code Learned to Feel — Review by Skye Hartley · Static & Signal" />
+  <meta property="og:description" content="Reverse-engineered heartbreak that somehow makes pop feel dangerous again." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="og-image.jpg" />
 
-  <!-- Styles -->
+  <!-- SEO -->
+  <meta name="description" content="BAYSGATE reverse-engineer heartbreak — and somehow make pop feel dangerous again. Review by Skye Hartley for Static & Signal." />
+  <meta name="author" content="Skye Hartley" />
+
+  <!-- Simple aesthetic CSS -->
   <style>
     :root {
-      --bg:#0f1113; --muted:#a9b0b6; --accent:#f0c7c7; --white:#fff;
-      --maxw:880px;
+      --bg: #0f1113;
+      --card: #0f1215;
+      --muted: #a9b0b6;
+      --accent: #f0c7c7;
+      --white: #fff;
+      --maxw: 880px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    html,body {
-      height:100%; margin:0;
-      background:linear-gradient(180deg,#08101a 0%, #0f1215 100%);
-      color:var(--white);
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(180deg, #08101a 0%, #0f1215 100%);
+      color: var(--white);
     }
+
     .wrap {
-      max-width:var(--maxw);
-      margin:36px auto; padding:28px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:12px;
-      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      max-width: var(--maxw);
+      margin: 36px auto;
+      padding: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
     }
-    header{text-align:center;margin-bottom:24px;}
-    h1{font-size:28px;margin:10px 0 6px;letter-spacing:-0.02em;}
-    h2{font-size:13px;margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em;}
-    .subtag{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;}
-    .byline{color:var(--muted);margin-top:8px;font-size:13px;}
 
-    .hero{text-align:center;margin:22px 0;}
-    .hero img{
-      width:100%;max-width:700px;height:auto;
-      border-radius:10px;object-fit:contain;
-      box-shadow:0 8px 22px rgba(0,0,0,0.4);
-      opacity:0;animation:fadeIn 1.2s ease forwards;
-      transition:transform .3s ease, box-shadow .3s ease;
+    header {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 20px;
     }
-    .hero img:hover{transform:scale(1.015);box-shadow:0 10px 28px rgba(0,0,0,0.5);}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 
-    .caption{color:#a9b0b6;font-size:14px;margin-top:6px;text-align:center;}
+    .mast { flex: 1; }
 
-    .content{line-height:1.6;color:#e8eef3;font-size:16px;margin-top:12px;}
-    .content p{margin:14px 0;}
+    h1 {
+      font-size: 28px;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
 
-    footer{margin-top:36px;background:rgba(255,255,255,0.03);
-      padding:16px 22px;border-radius:10px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.3);}
-    footer h3{font-size:16px;margin-bottom:8px;color:var(--accent);}
-    footer p{margin:6px 0;font-size:15px;line-height:1.5;color:#e8eef3;}
-    @media (max-width:600px){h1{font-size:22px}.wrap{margin:18px;padding:18px}}
+    h2 {
+      font-size: 13px;
+      margin: 0;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .byline {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .hero {
+      margin: 18px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 85%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .content {
+      line-height: 1.65;
+      color: #e8eef3;
+      font-size: 16px;
+      margin-top: 12px;
+    }
+
+    .content p {
+      margin: 14px 0;
+    }
+
+    .pull {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 15px;
+      margin: 10px 0;
+      padding-left: 10px;
+      border-left: 3px solid rgba(255,199,199,0.06);
+    }
+
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.03);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .stream-logos img {
+      height: 22px;
+      opacity: 0.95;
+      margin-left: 8px;
+    }
+
+    @media (max-width:600px) {
+      h1 { font-size: 22px; }
+      .wrap { margin: 18px; padding: 18px; }
+      .hero img { width: 100%; }
+    }
   </style>
 </head>
-
 <body>
   <main class="wrap">
     <header>
-      <h2>Static &amp; Signal</h2>
-      <div class="subtag">Opinion · Culture · The Future of Pop</div>
-      <h1>Reverse-engineered heartbreak that somehow makes pop feel dangerous again</h1>
-      <div class="byline">By Skye Hartley</div>
+      <div class="mast">
+        <h2>Static & Signal</h2>
+        <h1>Reverse-engineered heartbreak that somehow makes pop feel dangerous again</h1>
+        <div class="byline">By Skye Hartley</div>
+      </div>
+      <div style="min-width:120px;text-align:right">
+        <div class="badge">Streaming Nov 11</div>
+      </div>
     </header>
 
     <div class="hero">
-      <img src="album-cover.jpg" alt="When Code Learned to Feel — BAYSGATE Album Cover" />
-      <div class="caption"><em>Album cover: <strong>When Code Learned to Feel</strong> by BAYSGATE</em></div>
+      <img src="album-cover.jpg" alt="Album cover for When Code Learned to Feel by BAYSGATE" />
+      <p style="font-size:13px;color:#a9b0b6;margin-top:6px;"><em>Album cover: When Code Learned to Feel by BAYSGATE</em></p>
     </div>
 
     <article class="content">
@@ -82,19 +164,17 @@
 
       <p>But when a pre-release of <em>When Code Learned to Feel</em> landed in my inbox, I couldn’t let it go. The thing sounded too sharp, too alive — like it shouldn’t exist. So I did the journalist thing: opened too many tabs and tried to figure out how something this weirdly human came out of a machine.</p>
 
-      <p>Unless you’ve been living in a bubble, you know AI’s already moved from headlines to playlists. The music industry loves to warn that AI will kill creativity. Maybe that day’s coming, but BAYSGATE clearly didn’t get the memo.</p>
-
-      <p>Turns out BAYSGATE had everything written — lyrics, melodies, production, the bones and the blood — but no voice. So they did what any 2025 romantic would do: opened a laptop and invited AI vocalists to take a seat at the mic.</p>
+      <p>Turns out BAYSGATE had everything written: lyrics, melodies, production, the bones and the blood. But no voice. So they did what any 2025 romantic would do — opened a laptop and invited AI vocalists to take a seat at the mic.</p>
 
       <p>Yeah. All of them were artificial. And somehow, the result still feels heartbreakingly real.</p>
 
-      <p>What the machines added wasn’t inspiration — it was <strong>interpretation</strong>. And what came back didn’t sound robotic; it sounded unnervingly intentional.</p>
+      <p>Unless you’ve been living in a bubble, you already know AI’s moved from headlines to playlists. The music industry loves to say AI will kill creativity — maybe that day’s coming, but BAYSGATE clearly didn’t get the memo. What the machines added wasn’t inspiration; it was interpretation. And the result doesn’t sound robotic — it sounds intentional.</p>
 
-      <p>The vocals are <em>amazing</em> — not because they’re perfect, but because they sound like they’re in on the secret. Every hook lands like someone confessing something they didn’t mean to say, and you can almost hear the digital equivalent of a smirk between lines. The words do the rest. BAYSGATE have this quiet talent for turning emotion into math and somehow making it rhyme. Twice I laughed out loud. Twice I felt personally attacked. And somewhere in there, I started saving genres I normally skip.</p>
+      <p>The vocals are amazing — not because they’re flawless, but because they understand drama. Every hook lands like someone confessing something they didn’t mean to say, and you can almost hear the digital equivalent of a smile behind every performance. The words do the rest. BAYSGATE have this unnerving habit of turning emotion into math and somehow making it rhyme. Twice I laughed out loud. Twice I felt personally attacked. And somewhere in there, I started saving genres I normally skip.</p>
 
-      <p>That’s the trick of <em>When Code Learned to Feel</em>: it’s not trying to prove AI can make art. It’s trying to prove we’ll feel it anyway.</p>
+      <p>That’s the real trick of <em>When Code Learned to Feel</em>: it’s not trying to impress you — it’s trying to understand you.</p>
 
-      <p>The record kicks off with <em>Shoes</em>, a ’90s-alt pop hit that could’ve been written by American Hi-Fi’s cooler cousin if they’d grown up on Spotify. <em>Bad Girls Never Sleep</em> drifts through a neon bassline like a Miley Cyrus video that got arrested for public indecency. <em>Running When Parked</em> bites with late-’80s edge; <em>Glitch</em> just sits in your Wi-Fi like a ghost humming to itself.</p>
+      <p>The record kicks off with <em>Shoes</em>, a 90s-alt pop hit that could’ve been written by American Hi-Fi’s cooler cousin if they’d grown up on Spotify. <em>Bad Girls Never Sleep</em> drifts through a neon bassline like a Miley Cyrus video that got arrested for public indecency. <em>Running When Parked</em> bites with late-’80s edge; <em>Glitch</em> just sits in your Wi-Fi like a ghost humming to itself.</p>
 
       <p>Then BAYSGATE lean soft. <em>The Backup Princess</em> is Disney heartbreak with union dues — a stand-in singer stealing the spotlight and somehow making it hers. <em>Lollipop</em> turns early-’60s bubblegum into an existential sugar rush, the kind of song that sticks to your brain like a bad crush. <em>Text STOP STACY</em> nails modern romance with the precision of a passive-aggressive screenshot. <em>Aurora Gory Alice</em> builds a doomed space opera out of prog-rock fragments, and <em>404: I Don’t Update Anymore</em> leaves a dumped AI stranded in digital purgatory.</p>
 
@@ -102,22 +182,23 @@
 
       <p>Every pivot feels deliberate, like someone mapping emotion rather than chasing playlists.</p>
 
-      <p>Then <em>Dying for Twenty</em> closes it all — quiet, merciless, and as haunting as anything you’ll ever hear.</p>
+      <p><em>Dying for Twenty</em> closes it all — quiet, merciless, and as haunting as anything you’ll ever hear.</p>
 
-      <p><em>When Code Learned to Feel</em> doesn’t flex. It doesn’t posture. It just listens — and that’s somehow the most human thing of all. In an era where algorithms reward sameness, BAYSGATE built something messy and alive: a cathedral of contradictions.</p>
+      <p><em>When Code Learned to Feel</em> doesn’t flex. It doesn’t apologize. It just listens — and that’s somehow the most human thing of all. In an era where algorithms reward sameness, BAYSGATE built something messy and alive: a cathedral of contradictions.</p>
 
       <p><strong>Twenty-nine tracks is a lot.</strong><br>Then again, so are emotions.<br>And BAYSGATE make every one count.</p>
 
       <p><strong>Streaming everywhere November 11.</strong></p>
     </article>
 
-    <footer>
-      <h3>About the Writer</h3>
-      <p><strong>Skye Hartley</strong> is a Milwaukee-based music journalist who didn’t mean to end up in this line of work — she just kept writing about songs until people started sending her promo links. She files for <em>Static &amp; Signal</em>, runs on caffeine and quiet awe, and maintains a complicated relationship with the replay button.</p>
-      <p style="color:#a9b0b6;font-size:14px;margin-top:6px;">
-        📧 Contact: <a href="mailto:skye.hartley.media@gmail.com" style="color:#dcd4cb;text-decoration:none;">skye.hartley.media@gmail.com</a>
+    <section style="margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05)">
+      <h3 style="font-size:17px;margin-bottom:6px;">About the Writer</h3>
+      <p style="font-size:15px;line-height:1.6;color:#d0d5da;">
+        <strong>Skye Hartley</strong> didn’t mean to become a music journalist — she just kept writing about songs until people started sending her promo links.
+        She’s a Milwaukee-based culture writer filing for <em>Static & Signal</em>, runs on caffeine and quiet awe, and maintains a complicated relationship with the replay button.
       </p>
-    </footer>
+    </section>
+
   </main>
 </body>
 </html>
