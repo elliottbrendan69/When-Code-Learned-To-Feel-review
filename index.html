@@ -20,131 +20,34 @@
   <!-- Simple aesthetic CSS -->
   <style>
     :root {
-      --bg: #0f1113;
-      --card: #0f1215;
-      --muted: #a9b0b6;
-      --accent: #f0c7c7;
-      --white: #fff;
-      --maxw: 880px;
+      --bg:#0f1113; --card:#0f1215; --muted:#a9b0b6; --accent:#f0c7c7; --white:#fff;
+      --maxw:880px;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-
-    html, body {
-      height: 100%;
-      margin: 0;
-      background: linear-gradient(180deg, #08101a 0%, #0f1215 100%);
-      color: var(--white);
-    }
-
-    .wrap {
-      max-width: var(--maxw);
-      margin: 36px auto;
-      padding: 28px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-    }
-
-    header {
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      margin-bottom: 20px;
-    }
-
-    .mast { flex: 1; }
-
-    h1 {
-      font-size: 28px;
-      margin: 0 0 6px;
-      letter-spacing: -0.02em;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: 13px;
-      margin: 0;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .byline {
-      color: var(--muted);
-      margin-top: 8px;
-      font-size: 13px;
-    }
-
-    .hero {
-      margin: 18px 0;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .hero img {
-      width: 85%;
-      max-width: 700px;
-      height: auto;
-      border-radius: 10px;
-      object-fit: contain;
-    }
-
-    .content {
-      line-height: 1.65;
-      color: #e8eef3;
-      font-size: 16px;
-      margin-top: 12px;
-    }
-
-    .content p {
-      margin: 14px 0;
-    }
-
-    .pull {
-      font-weight: 700;
-      color: var(--accent);
-      font-size: 15px;
-      margin: 10px 0;
-      padding-left: 10px;
-      border-left: 3px solid rgba(255,199,199,0.06);
-    }
-
-    footer {
-      margin-top: 22px;
-      color: var(--muted);
-      font-size: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      background: rgba(255,255,255,0.03);
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 13px;
-    }
-
-    .stream-logos img {
-      height: 22px;
-      opacity: 0.95;
-      margin-left: 8px;
-    }
-
-    @media (max-width:600px) {
-      h1 { font-size: 22px; }
-      .wrap { margin: 18px; padding: 18px; }
-      .hero img { width: 100%; }
-    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#08101a 0%, #0f1215 100%);color:var(--white)}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    header{display:flex;gap:18px;align-items:flex-start;margin-bottom:20px}
+    .mast{flex:1}
+    h1{font-size:28px;margin:0 0 6px;letter-spacing:-0.02em;font-weight:700}
+    h2{font-size:13px;margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em}
+    .byline{color:var(--muted);margin-top:8px;font-size:13px}
+    .hero{margin:18px 0;border-radius:10px;overflow:hidden;text-align:center}
+    .hero img{width:85%;max-width:700px;height:auto;border-radius:10px;object-fit:contain}
+    .content{line-height:1.65;color:#e8eef3;font-size:16px;margin-top:12px}
+    .content p{margin:14px 0}
+    .pull{font-weight:700;color:var(--accent);font-size:15px;margin:10px 0;padding-left:10px;border-left:3px solid rgba(255,199,199,0.06)}
+    footer{margin-top:22px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .badge{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:8px;font-size:13px}
+    .stream-logos img{height:22px;opacity:0.95;margin-left:8px}
+    .section-tag{font-size:12px;letter-spacing:0.18em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+    @media(max-width:600px){h1{font-size:22px}.wrap{margin:18px;padding:18px}.hero img{width:100%}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <header>
       <div class="mast">
+        <div class="section-tag">Opinion · Culture · The Future of Pop</div>
         <h2>Static & Signal</h2>
         <h1>Reverse-engineered heartbreak that somehow makes pop feel dangerous again</h1>
         <div class="byline">By Skye Hartley</div>
@@ -198,7 +101,6 @@
         She’s a Milwaukee-based culture writer filing for <em>Static & Signal</em>, runs on caffeine and quiet awe, and maintains a complicated relationship with the replay button.
       </p>
     </section>
-
   </main>
 </body>
 </html>
