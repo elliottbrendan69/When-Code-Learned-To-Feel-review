@@ -25,13 +25,23 @@
     h1{font-size:28px;margin:6px 0;letter-spacing:-0.02em}
     h2{font-size:13px;margin:0;color:var(--muted);text-transform:uppercase;letter-spacing:0.14em}
     .byline{color:var(--muted);margin-top:8px;font-size:13px}
-    .hero{margin:22px 0;border-radius:10px;overflow:hidden}
-    .hero img{width:100%;display:block;height:auto;object-fit:cover}
+    .hero{margin:22px 0;text-align:center}
+    .hero img{
+      width:70%; /* reduced from 100% to ~70% */
+      max-width:600px;
+      border-radius:10px;
+      display:inline-block;
+      height:auto;
+      object-fit:cover;
+      box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    }
     .content{line-height:1.6;color:#e8eef3;font-size:16px;margin-top:12px}
     .content p{margin:14px 0}
     .pull{font-weight:700;color:var(--accent);font-size:15px;margin:10px 0;padding-left:10px;border-left:3px solid rgba(255,199,199,0.06)}
     footer{margin-top:22px;color:var(--muted);font-size:14px;text-align:center}
-    @media (max-width:600px){h1{font-size:22px}.wrap{margin:18px;padding:18px}}
+    a{color:#f0c7c7;text-decoration:none}
+    a:hover{text-decoration:underline}
+    @media (max-width:600px){h1{font-size:22px}.wrap{margin:18px;padding:18px}.hero img{width:85%;}}
   </style>
 </head>
 
@@ -86,7 +96,7 @@
     <footer>
       <p><strong>About the Writer</strong><br>
       Skye Hartley didn’t mean to become a music journalist — she just kept writing about songs until people started sending her promo links. She’s a Milwaukee-based culture writer filing for <em>Static &amp; Signal</em>, runs on caffeine and quiet awe, and maintains a complicated relationship with the replay button.<br>
-      📧 <a href="mailto:skye.hartley.media@gmail.com" style="color:#f0c7c7">skye.hartley.media@gmail.com</a></p>
+      📧 <a href="mailto:skye.hartley.media@gmail.com">skye.hartley.media@gmail.com</a></p>
     </footer>
   </main>
 </body>
